@@ -19,7 +19,7 @@ jobs:
     name: Check for pull request type label
     runs-on: ubuntu-latest
     steps:
-      - uses: rakesh/Rj_sep2023@main
+      - uses: rakesh/Rj_sep2023@v1
         with:
           any_of: documentation,enhancement,bug
           repo_token: ${{ secrets.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 }}
