@@ -19,7 +19,7 @@ jobs:
     name: Check for pull request type label
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: Slashgear/action-check-pr-title@2.0.0
         with:
-          any_of: documentation,enhancement,bug
-          repo_token: ${{ secrets.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 }}
+            regex: '([a-z])+'
+       
