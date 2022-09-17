@@ -1,0 +1,25 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Check tags In PR
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    types: [opened, labeled, unlabeled, synchronize]
+    branches: [ "main" ]
+
+
+# A workflow run is made  now up of one or more jobs that can run sequentially or in parallel
+jobs:
+ 
+  check_pull_request_type:
+    name: Check for pull request type label
+    runs-on: ubuntu-latest
+    steps:
+      - uses: rakesh4145/Rj_sep2023@v2
+        with:
+          any_of: documentation,enhancement,bug
+          repo_token: ${{ secrets.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 }}
